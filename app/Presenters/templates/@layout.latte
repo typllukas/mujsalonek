@@ -12,16 +12,16 @@
 
 	<!-- CSS Monica
     ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{$basePath}/css/vendor.css">
+    <link rel="stylesheet" href="{$basePath}/css/styles.css">
     {block custom-stylesheets}
     {/block}
 	<!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="js/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{$basePath}/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{$basePath}/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{$basePath}/images/favicon-16x16.png">
+    <link rel="manifest" href="{$basePath}/js/site.webmanifest">
 </head> 
 
 <body id="top">
@@ -48,7 +48,7 @@
                 <div class="s-header__block">
                     <div class="s-header__logo">
                         <a class="logo" href="{link Home:default}">
-                            <img src="images/logo.svg" alt="Homepage">
+                            <img src="{$basePath}/images/logo.svg" alt="Homepage">
                         </a>
                     </div>
 
@@ -103,7 +103,7 @@
                         <li><a href="{link Blog:blog}">Blog</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="{link Contact:contact}">Contact</a></li>
-                        <li><a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a></li>
+                        <li><a href="#">DreamHost</a></li>
                     </ul>
                 </div>
                 <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter">
@@ -171,8 +171,8 @@
     </div> <!-- end page-wrap -->
             
     <script src="https://unpkg.com/nette-forms@3/src/assets/netteForms.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{$basePath}/js/plugins.js"></script>
+    <script src="{$basePath}/js/main.js"></script>
 	{block customscripts}
 	{/block}
 </body>

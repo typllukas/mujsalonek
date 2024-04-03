@@ -37,11 +37,11 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-0-gutter">
                                 <div class="ot-portfolio-item">
                                     <figure class="effect-bubba">
-                                        <img src="images/demo/{$portfolioItem->image_name}" alt="{$portfolioItem->image_name}" class="img-responsive" />
+										<img src="images/demo/{$portfolioItem->image_name}" alt="{$portfolioItem->image_name}" class="img-responsive" />
                                         <figcaption>
                                             <h2>{$portfolioItem->title}</h2>
                                             <p>{$portfolioItem->subtitle}</p>
-                                            <a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+                                            <a href="{link Portfolio:portfolioItem $portfolioItem->id}" data-toggle="modal" data-target="#Modal-1">View more</a>
                                         </figcaption>
                                     </figure>
                                 </div>

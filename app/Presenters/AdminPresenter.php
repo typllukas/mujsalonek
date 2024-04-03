@@ -1,15 +1,14 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Presenters;
 
 use Nette;
+use Nette\Application\UI\Form;
 
-
-final class AdminPresenter extends Nette\Application\UI\Presenter
+final class EditPresenter extends Nette\Application\UI\Presenter
 {
-    public function renderAdmin(): void
-    {
+    public function __construct(
+        private Nette\Database\Explorer $database,
+    ) {
     }
 }

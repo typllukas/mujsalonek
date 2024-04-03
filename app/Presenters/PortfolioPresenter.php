@@ -8,7 +8,7 @@ use Nette;
 
 
 final class PortfolioPresenter extends Nette\Application\UI\Presenter
-{
+{  
     public function __construct(
         private Nette\Database\Explorer $database,
     ) {
@@ -20,5 +20,18 @@ final class PortfolioPresenter extends Nette\Application\UI\Presenter
             ->table('portfolio')
             ->order('order ASC')
             ->limit(12);
+    }
+
+    public function renderPortfolioItem($id): void
+    {
+        $portfolioItem = $this->database
+            ->table('portfolio')
+            ->get($id);
+
+        if (!$portfolioItem) {
+            $this->error('Item not found');
+        }
+
+        $this->template->portfolioItem = $portfolioItem;
     }
 }

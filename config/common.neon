@@ -1,5 +1,5 @@
 parameters:
-
+	basePath: /moje-projekty/Nette-projekty/mujSalonek/www
 
 application:
 	errorPresenter: Error

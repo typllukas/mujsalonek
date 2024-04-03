@@ -19,6 +19,7 @@ final class RouterFactory
 		$router->addRoute('blog', 'Blog:blog');
 		$router->addRoute('contact', 'Contact:contact');
 		$router->addRoute('portfolio', 'Portfolio:portfolio');
+		$router->addRoute('portfolio/<id>', 'Portfolio:portfolioItem');
 		$router->addRoute('<presenter>/<action>[/<id>]', 'Home:default');
 
 		return $router;
