@@ -1,0 +1,376 @@
+// Import necessary Bootstrap Sass files
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/grid";
+@import "bootstrap/utilities";
+
+// Additional custom styles for portfolio section
+
+/*--------------------
+1. General
+--------------------*/
+
+#portfolio body {
+    margin: 0px;
+    font-family: "Raleway", Sans-serif;
+}
+
+#portfolio h1,
+#portfolio h2,
+#portfolio h3,
+#portfolio h4,
+#portfolio h5,
+#portfolio h6 {
+    font-weight: 200;
+    letter-spacing: 0.4px;
+    font-family: "Raleway", Sans-serif;
+    color: #232323;
+}
+
+#portfolio p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #252525;
+}
+
+#portfolio a:hover,
+#portfolio a:focus,
+#portfolio a:active,
+#portfolio a.active {
+    color: #fec503;
+}
+
+#portfolio a,
+#portfolio a:hover,
+#portfolio a:focus,
+#portfolio a:active,
+#portfolio a.active {
+    outline: 0;
+}
+
+#portfolio ::selection {
+    text-shadow: none;
+    background: #fed136;
+}
+
+@media (min-width: 768px) {
+    #portfolio section {
+        padding: 150px 0;
+    }
+}
+
+#portfolio section {
+    padding: 35px 0 60px;
+}
+
+/*--------------------
+1.1 Reset bootstrap
+--------------------*/
+
+#portfolio .row-0-gutter {
+    margin-left: -13px;
+    margin-right: -13px;
+}
+
+#portfolio .col-0-gutter {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*--------------------
+4. Sections
+--------------------*/
+
+#portfolio .section-title {
+    padding-bottom: 30px;
+}
+
+#portfolio .section-title h2 {
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+#portfolio .section-title p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 33px;
+    margin: 25px 100px 30px 100px;
+}
+
+#portfolio .mz-module .section-title {
+    padding: 40px 0;
+}
+
+/*--------------------
+4.3. Portfolio
+--------------------*/
+
+#portfolio figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0 1px 1px 0;
+    background: #726FB9;
+    text-align: center;
+    cursor: pointer;
+}
+
+#portfolio figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio .ot-portfolio-item figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+#portfolio .ot-portfolio-item figure figcaption,
+#portfolio .ot-portfolio-item figure figcaption>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#portfolio figure.effect-bubba {
+    background: #000;
+    margin-bottom: 1px;
+}
+
+#portfolio figure.effect-bubba img {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+#portfolio figure.effect-bubba:hover img {
+    opacity: 0.4;
+}
+
+#portfolio figure.effect-bubba figcaption::before,
+#portfolio figure.effect-bubba figcaption::after {
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    bottom: 60px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+#portfolio figure.effect-bubba figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+#portfolio figure.effect-bubba figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+
+#portfolio figure.effect-bubba h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 12%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+
+#portfolio figure.effect-bubba p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0px 2.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+
+#portfolio figure.effect-bubba:hover figcaption::before,
+#portfolio figure.effect-bubba:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#portfolio figure.effect-bubba:hover h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+#portfolio figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -10, 0);
+    transform: translate3d(0, -5px, 0);
+}
+
+/*--------------------
+6. Modal
+--------------------*/
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header .close {
+    font-size: 30px;
+}
+
+.modal-title {
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-body p {
+    margin: 30px 20px;
+    color: #2D2D2D;
+}
+
+.modal-works {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    margin: 25px 20px;
+}
+
+.modal-works span {
+    background-color: #FED136;
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+/*--------------------
+7. Components
+--------------------*/
+
+
+// ADD STYLING FOR BUTTONS FROM styles.css
+
+
+/* .btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    color: #fff;
+    background-color: #fec503;
+    border-color: #f6bf01;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open .dropdown-toggle.btn {
+    color: #fff;
+    background-color: #fec503;
+    border-color: #f6bf01;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-xl {
+    color: #fff;
+    background-color: #726FB9;
+    border-color: #726FB9;
+    font-family: "Robot", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 20px 40px;
+}
+ */
+
+/* ----------------------------------------
+Custom CSS for flexing the portfolio section 
+-------------------------------------------*/
+#portfolio .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    /* Adjust for Bootstrap gutter */
+    margin-right: -15px;
+    /* Adjust for Bootstrap gutter */
+}
+
+#portfolio .row.row-0-gutter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    /* Adjust for Bootstrap gutter */
+    margin-right: -15px;
+    /* Adjust for Bootstrap gutter */
+}
+
+#portfolio .col-md-6.col-0-gutter {
+    flex: 0 0 50%;
+    /* Two items per row */
+    padding-left: 0px;
+    /* Adjust for Bootstrap gutter */
+    padding-right: 0px;
+    /* Adjust for Bootstrap gutter */
+}
+
+#portfolio .s-pagecontent.pagecontent {
+    --vspace-4: 40px;
+    --vspace-3: 40px;
+}
+
+@media (max-width: 767.98px) {
+    #portfolio .col-md-6.col-0-gutter {
+        flex: 0 0 100%;
+        /* One item per row on mobile */
+    }
+}

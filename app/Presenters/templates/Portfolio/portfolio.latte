@@ -1,0 +1,183 @@
+{block custom-stylesheets}
+<link rel="stylesheet" href="bootstrap/sass/portfolio.scss">
+{/block}
+
+{block content}
+
+    <!-- # site main content
+    ================================================== -->
+    <section id="content" class="s-content">
+        <section class="s-pageheader pageheader">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1 class="page-title">
+                        <span class="page-title__small-type text-pretitle">Portfolio</span>
+                        Our Works
+                    </h1>  
+                </div>
+            </div>
+        </section> <!-- end pageheader --> 
+        <section class="s-pagecontent pagecontent">
+            <div class="row pageintro">
+                <div class="column xl-6 lg-12">
+                    <h2 class="text-display-title">Our Works</h2>
+                </div>
+                <div class="column xl-6 lg-12 u-flexitem-x-right">
+                    <p class="lead">
+                    Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all and you will find what you are looking for. 
+                    </p>
+                </div>                       
+            </div> <!-- end pageintro -->   
+            
+            <div class="row pagemedia">
+                <section id="portfolio">
+                    <div class="portfolio-container">
+                        <div class="row row-0-gutter">
+                            {foreach $portfolio as $portfolioItem}
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-0-gutter">
+                                <div class="ot-portfolio-item">
+                                    <figure class="effect-bubba">
+                                        <img src="images/demo/{$portfolioItem->image_name}" alt="{$portfolioItem->image_name}" class="img-responsive" />
+                                        <figcaption>
+                                            <h2>{$portfolioItem->title}</h2>
+                                            <p>{$portfolioItem->subtitle}</p>
+                                            <a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div> 
+                            {/foreach}
+                        </div>
+                    </div><!-- container -->
+                </section>
+            </div> <!-- end pagemedia -->
+        </section> <!-- pagecontent -->
+    </section> <!-- s-content-->
+
+    {* <!-- Modal for portfolio item 1 -->
+		<div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-1">Dean & Letter</h4>
+					</div>
+					<div class="modal-body">
+						<img src="images/demo/portfolio-1.jpg" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 2 -->
+		<div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-2">Startup Framework</h4>
+					</div>
+					<div class="modal-body">
+						<img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 3 -->
+		<div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-3">Lamp & Velvet</h4>
+					</div>
+					<div class="modal-body">
+						<img src="images/demo/portfolio-3.jpg" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 4 -->
+		<div class="modal fade" id="Modal-4" tabindex="-1" role="dialog" aria-labelledby="Modal-label-4">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-4">Smart Name</h4>
+					</div>
+					<div class="modal-body">
+						<img src="images/demo/portfolio-4.jpg" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for portfolio item 5 -->
+		<div class="modal fade" id="Modal-5" tabindex="-1" role="dialog" aria-labelledby="Modal-label-5">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
+					</div>
+					<div class="modal-body">
+						<img src="images/demo/portfolio-5.jpg" alt="img01" class="img-responsive" />
+						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div> 
+    *}
+
+    <!-- # cta
+    ================================================== -->
+    <section id="cta" class="s-cta">
+        <div class="row row-x-center text-center">
+            <div class="column xl-8 lg-12">
+                <div class="s-cta__content">
+                    <h2 class="text-display-title">
+                    Get started with a consultation today.
+                    </h2>
+                    <p class="lead">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis rem, esse doloribus sint eaque at debitis enim vitae minus expedita ratione dignissimos sit nostrum optio sequi. Ipsa at beatae quam.
+                    </p>
+                    <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                </div>
+            </div>
+        </div>
+    </section> <!-- end s-cta -->
+
+{/block}
+
+{block customscripts}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/SmoothScroll.js"></script>
+<script src="bootstrap/js/theme-scripts.js"></script>
+{/block}
