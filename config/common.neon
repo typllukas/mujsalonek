@@ -24,3 +24,7 @@ database:
 	dsn: 'mysql:host=127.0.0.1;port=3333;dbname=mujSalonek'
 	user: 'root'
 	password: 'mujsalonek'
+
+security:
+	users:
+		admin: "mujsalonek-2024" 

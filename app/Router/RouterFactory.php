@@ -19,6 +19,7 @@ final class RouterFactory
 		$router->addRoute('admin', 'Admin:admin');
 		$router->addRoute('admin/add-portfolio-item', 'Admin:addPortfolioItem');
 		$router->addRoute('admin/edit-portfolio-item/<id>', 'Admin:editPortfolioItem');
+		$router->addRoute('admin/sign-in', 'SignIn:signIn');
 		$router->addRoute('blog', 'Blog:blog');
 		$router->addRoute('contact', 'Contact:contact');
 		$router->addRoute('portfolio', 'Portfolio:portfolio');
