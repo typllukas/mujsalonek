@@ -16,6 +16,9 @@ final class RouterFactory
 	{
 		$router = new RouteList;
 		$router->addRoute('about', 'About:about');
+		$router->addRoute('admin', 'Admin:admin');
+		$router->addRoute('admin/add-portfolio-item', 'Admin:addPortfolioItem');
+		$router->addRoute('admin/edit-portfolio-item/<id>', 'Admin:editPortfolioItem');
 		$router->addRoute('blog', 'Blog:blog');
 		$router->addRoute('contact', 'Contact:contact');
 		$router->addRoute('portfolio', 'Portfolio:portfolio');
