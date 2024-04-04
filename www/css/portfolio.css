@@ -1,12 +1,3 @@
-// Import necessary Bootstrap Sass files
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-@import "bootstrap/grid";
-@import "bootstrap/utilities";
-
-// Additional custom styles for portfolio section
-
 /*--------------------
 1. General
 --------------------*/
@@ -274,8 +265,6 @@
 7. Components
 --------------------*/
 
-
-// ADD STYLING FOR BUTTONS FROM styles.css
 
 
 /* .btn-xl:hover,
